@@ -1,0 +1,689 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNi23UMqzcWjLnV08LDWItj",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kloepetr/python-beginner-mini-projects/blob/main/chapter%204%20python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "54hvrklDlfmV"
+      },
+      "outputs": [],
+      "source": [
+        "'''chapter 4 notes \n",
+        "-loop in a list\n",
+        "-loop with f string\n",
+        "-action after loop is performed\n",
+        "'''"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#for loop in a list\n",
+        "magicians = ['joe', 'bob', 'frank']\n",
+        "for magician in magicians:\n",
+        " print(magician)\n",
+        "\n",
+        "#general list in list items\n",
+        "cats = ['a','b','c']\n",
+        "for cat in cats:\n",
+        "  print(cat)\n",
+        "items_in_list = ['a','b','c']\n",
+        "for items in items_in_list:\n",
+        "  print(items)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UizmIY2Hlwvy",
+        "outputId": "ab5f7fd3-5fa2-40b2-893a-f2bb94ca29fd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "joe\n",
+            "bob\n",
+            "frank\n",
+            "a\n",
+            "b\n",
+            "c\n",
+            "a\n",
+            "b\n",
+            "c\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#f string in a for loop\n",
+        "magicians = ['joe', 'bob', 'frank']\n",
+        "for magician in magicians:\n",
+        "  print(f\"{magician.title()}, text\")\n",
+        "  print(f\"I can't wait to see your next trick, {magician.title()}.\\n\")\n",
+        "  # \\n is a blank after every loop\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nxlRdGimlxMM",
+        "outputId": "e850772c-016b-4c9f-d73b-2b6a00ebf1a8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Joe, text\n",
+            "I can't wait to see your next trick, Joe.\n",
+            "\n",
+            "Bob, text\n",
+            "I can't wait to see your next trick, Bob.\n",
+            "\n",
+            "Frank, text\n",
+            "I can't wait to see your next trick, Frank.\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#actions after a for loop\n",
+        "magicians = ['joe', 'bob', 'frank']\n",
+        "for magician in magicians:\n",
+        "  print(f\"{magician.title()}, text\")\n",
+        "  print(f\"I can't wait to see your next trick, {magician.title()}.\\n\")\n",
+        "#edit actions without indentation from the printed value. \n",
+        "print(\"hi\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "385Wyv7JlxO6",
+        "outputId": "44653965-078c-4885-8a24-5ed5ce1e391c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Joe, text\n",
+            "I can't wait to see your next trick, Joe.\n",
+            "\n",
+            "Bob, text\n",
+            "I can't wait to see your next trick, Bob.\n",
+            "\n",
+            "Frank, text\n",
+            "I can't wait to see your next trick, Frank.\n",
+            "\n",
+            "hi\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Try it yourself practices**"
+      ],
+      "metadata": {
+        "id": "h454jv-BphsE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-1:pizzas \n",
+        "pizzas = ['pepperoni', 'sausage', 'mushroom']\n",
+        "for pizza in pizzas:\n",
+        "  print(f\"i like {pizza.title()}\")\n",
+        "print(\"I love pizza so much\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EBQ418U3lxR5",
+        "outputId": "cf6db790-8f08-46af-f218-b6ed779a94eb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "i like Pepperoni\n",
+            "i like Sausage\n",
+            "i like Mushroom\n",
+            "I love pizza so much\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-2:animals\n",
+        "animals = ['tiger', 'lion', 'kangaroo']\n",
+        "for animal in animals:\n",
+        "  print(animal)\n",
+        "  print(f\"{animal} would be a good predator\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DdQSW5bxlxUW",
+        "outputId": "fc67c44d-929c-49a8-ca47-3538ce26ffd4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "tiger\n",
+            "tiger would be a good predator\n",
+            "lion\n",
+            "lion would be a good predator\n",
+            "kangaroo\n",
+            "kangaroo would be a good predator\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#making numeral lists \n",
+        "\n",
+        "for value in range(1, 5):\n",
+        "  print(value)\n",
+        "#range() function, the example only prints 1,2,3,4 because it stops at the second off last value\n",
+        "for value in range(1, 6):\n",
+        "  print(value)\n",
+        "#this example bellow will print range(0,6)\n",
+        "print(range(6))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HbXtlvOtlxX4",
+        "outputId": "e11f32c7-ee61-437e-f03b-74606b2d6154"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "range(0, 6)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#wrap range function in a list\n",
+        "numbers = list(range(1, 6))\n",
+        "print(numbers)\n",
+        "#skip certain numbers in a list, this will print all the even numbers inside the range \n",
+        "even_numbers = list(range(2, 11, 2))\n",
+        "print(even_numbers)\n",
+        "#printing all the squared numbers \n",
+        "square_list = []\n",
+        "for value in range(1, 11):\n",
+        "  square_value = value ** 2\n",
+        "  square_list.append(square_value)\n",
+        "print(square_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_UZORKGolxb2",
+        "outputId": "183b4d67-367c-48f1-a254-afc1cad9a061"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5]\n",
+            "[2, 4, 6, 8, 10]\n",
+            "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-2simple stat with list \n",
+        "squares = [value**2 for value in range (1, 11)]\n",
+        "print(squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4nJWrecAlxej",
+        "outputId": "085358cc-9ed9-490a-de36-4e6d22fe14fb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-3 counting to twenty\n",
+        "for value in range(1, 21):\n",
+        "  print(value)\n"
+      ],
+      "metadata": {
+        "id": "_p2e0bCFlxhU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-4 count to one million \n",
+        "for value in range(1, 1000001):\n",
+        "  print(value)"
+      ],
+      "metadata": {
+        "id": "a258W5OVlxkA"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from re import L\n",
+        "#4-5 summing a million \n",
+        "''' 4-5. Summing a Million: Make a list of the numbers from one to one million, \n",
+        "and then use min() and max() to make sure your list actually starts at one and ends\n",
+        "at one million. Also, use the sum() function to see how quickly Python can add\n",
+        "a million numbers.'''\n",
+        "\n",
+        "numbers = list(range(1, 1000001))\n",
+        "print(min(numbers))\n",
+        "print(max(numbers))\n",
+        "print(sum(numbers))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "r5efcxISlxm3",
+        "outputId": "9726d472-763f-4474-f377-96224e7381d2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "1000000\n",
+            "500000500000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-6 odd numbers\n",
+        "for value in range(1, 21):\n",
+        "  print(value)\n"
+      ],
+      "metadata": {
+        "id": "020QIfuzlxpc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "75f38e70-7e32-4ff9-becc-03946f662fd6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n",
+            "11\n",
+            "12\n",
+            "13\n",
+            "14\n",
+            "15\n",
+            "16\n",
+            "17\n",
+            "18\n",
+            "19\n",
+            "20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "'''4-7. Threes: Make a list of the multiples of 3, from 3 to 30. Use a for loop to\n",
+        "print the numbers in your list.'''\n",
+        "threes = list(range(3,31,3))\n",
+        "for three in threes :\n",
+        "  print(three)"
+      ],
+      "metadata": {
+        "id": "oHBKLLnylxsH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "31b4aad8-f8bf-453b-b5fb-34d5cc2002a8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n",
+            "6\n",
+            "9\n",
+            "12\n",
+            "15\n",
+            "18\n",
+            "21\n",
+            "24\n",
+            "27\n",
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "'''4-8. Cubes: A number raised to the third power is called a cube. For example,\n",
+        "the cube of 2 is written as 2**3 in Python. Make a list of the first 10 cubes (that\n",
+        "is, the cube of each integer from 1 through 10), and use a for loop to print out\n",
+        "the value of each cube.'''\n",
+        "cubes = []\n",
+        "for value in range(1, 11):\n",
+        "  cubes.append(value **3)\n",
+        "for cube in cubes:\n",
+        "  print(cube)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jg0v9eQ1diB6",
+        "outputId": "60049201-62ca-418a-9d33-72b027b76b35"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "8\n",
+            "27\n",
+            "64\n",
+            "125\n",
+            "216\n",
+            "343\n",
+            "512\n",
+            "729\n",
+            "1000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#list comprehension\n",
+        "cubes = [value ** 3 for value in range(1, 11)]\n",
+        "cubes"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R_09VkPuhAFn",
+        "outputId": "88dc4d11-a628-47cf-ace1-640ed761e45d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " '''\n",
+        " 4-10. Slices: Using one of the programs you wrote in this chapter, add several\n",
+        "lines to the end of the program that do the following:\n",
+        "• Print the message The first three items in the list are:. Then use a slice to\n",
+        "print the first three items from that program’s list.\n",
+        "• Print the message Three items from the middle of the list are:. Then use a\n",
+        "slice to print three items from the middle of the list.\n",
+        "• Print the message The last three items in the list are:. Then use a slice to\n",
+        "print the last three items in the list'''\n",
+        "\n",
+        "letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']\n",
+        "print(f'the first three are {letters[:3]}')\n",
+        "print(f'the middle three are {letters[2:5]}')\n",
+        "print(f'the last three are {letters[-3:]}')\n"
+      ],
+      "metadata": {
+        "id": "76ahcdUxlxu5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4e2ff135-4d4c-4ec1-987b-4b3e49048af2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "the first three are ['a', 'b', 'c']\n",
+            "the middle three are ['c', 'd', 'e']\n",
+            "the last three are ['e', 'f', 'g']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-11:my pizzas, your pizzas\n",
+        "my_pizza = ['pepperoni', 'sausage', 'mushroom']\n",
+        "friend_pizzas = ['pepperoni', 'sausage', 'mushroom']\n",
+        "friend_pizzas.append(\"pinnaple\")\n",
+        "print(f'my favorite pizza are {my_pizza}')\n",
+        "print(f'my friend\\'s favorite pizza are{friend_pizzas}')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b4d61d40-f9f8-41f0-e73c-a8d72a280131",
+        "id": "f4ltFa58QgPU"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "my favorite pizza are ['pepperoni', 'sausage', 'mushroom']\n",
+            "my friend's favorite pizza are['pepperoni', 'sausage', 'mushroom', 'pinnaple']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-12\n",
+        "#foods.py\n",
+        "my_foods = ['pizza', 'falafel', 'carrot cake']\n",
+        "for foods in my_foods:\n",
+        "  print(f\"my favorite foods are: {my_foods}\")\n",
+        "\n",
+        "friend_foods = ['fries', 'lemon', 'chips']\n",
+        "for stuff in friend_foods:\n",
+        "  print(f\"My friend/'s favorite foods are: {friend_foods}\")\n"
+      ],
+      "metadata": {
+        "id": "UbPUjSZNlx0u",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6756cb8c-208d-4759-e305-a763fc82392b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "my favorite foods are: ['pizza', 'falafel', 'carrot cake']\n",
+            "my favorite foods are: ['pizza', 'falafel', 'carrot cake']\n",
+            "my favorite foods are: ['pizza', 'falafel', 'carrot cake']\n",
+            "My friend/'s favorite foods are: ['fries', 'lemon', 'chips']\n",
+            "My friend/'s favorite foods are: ['fries', 'lemon', 'chips']\n",
+            "My friend/'s favorite foods are: ['fries', 'lemon', 'chips']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-13\n",
+        "foods = ('hamburger', 'fries', 'salad', 'chicken', 'sushi')\n",
+        "#foods.append('apples')\n",
+        "print(\"Original menu:\")\n",
+        "for food in foods:\n",
+        "    print(foods)\n",
+        "foods = ('cheese', 'queso', 'banana', 'sandwich','beef')\n",
+        "print(\"\\nModified menu:\")\n",
+        "for new in foods:\n",
+        "    print(foods)"
+      ],
+      "metadata": {
+        "id": "QBIk5YMslx3o",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0dc8c14f-6ba9-45b6-b98a-d487f1d13205"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original menu:\n",
+            "('hamburger', 'fries', 'salad', 'chicken', 'sushi')\n",
+            "('hamburger', 'fries', 'salad', 'chicken', 'sushi')\n",
+            "('hamburger', 'fries', 'salad', 'chicken', 'sushi')\n",
+            "('hamburger', 'fries', 'salad', 'chicken', 'sushi')\n",
+            "('hamburger', 'fries', 'salad', 'chicken', 'sushi')\n",
+            "\n",
+            "Modified menu:\n",
+            "('cheese', 'queso', 'banana', 'sandwich', 'beef')\n",
+            "('cheese', 'queso', 'banana', 'sandwich', 'beef')\n",
+            "('cheese', 'queso', 'banana', 'sandwich', 'beef')\n",
+            "('cheese', 'queso', 'banana', 'sandwich', 'beef')\n",
+            "('cheese', 'queso', 'banana', 'sandwich', 'beef')\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
