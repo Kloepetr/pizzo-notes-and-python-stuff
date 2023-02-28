@@ -1,0 +1,363 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMhTwDvbxNSATaA1Su9b+vJ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kloepetr/pizzo-notes-and-python-stuff/blob/main/chapter%205%20notes%20(not%20done)\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ogbht0z3Nnyr",
+        "outputId": "97fddbc5-722a-4110-a874-38053ea432b6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Audi\n",
+            "BMW\n",
+            "Sabaru\n",
+            "Toyota\n"
+          ]
+        }
+      ],
+      "source": [
+        "cars = ['audi', 'bmw', 'sabaru', 'toyota']\n",
+        "for car in cars: \n",
+        "    if car == 'bmw':\n",
+        "        print(car.upper())\n",
+        "    else:\n",
+        "        print(car.title())"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#checking equality\n",
+        "car = 'bmw'\n",
+        "car == 'bmw'\n",
+        "car = 'audi'\n",
+        "car == 'bmw'\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LEUGZj1oNuSF",
+        "outputId": "764af376-d687-4622-bee4-ba73320ab677"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "'''\n",
+        "2. ignoring case when checking for equality \n",
+        "'''\n",
+        "car = 'Audi'\n",
+        "car.lower() == 'audi'\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8ngB7CvMONys",
+        "outputId": "306bfc93-4576-4399-a60f-c53142d3e421"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = 18\n",
+        "age == 18"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Vzx_SIZNOwdk",
+        "outputId": "fb589baa-4d8f-4cfa-d8e7-8364aa9b3eff"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "anwser = 17\n",
+        "if anwser != 42:\n",
+        "  print(\"wrong number\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6FjKWaRmPgln",
+        "outputId": "f3cae20d-e7d8-41c0-d7c2-d27d9b27fba4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "wrong number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age_0 = 22\n",
+        "age_1 = 18\n",
+        "age_0 >= 21 and age_1 >= 21\n",
+        "age_1 = 22\n",
+        "age_0 >= 21 and age_1 >= 21\n",
+        "\n",
+        "\n",
+        "(age_0 >= 21) and (age_1 >= 21)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ttrmx4LXPxLm",
+        "outputId": "f31b1126-9987-4e81-8912-c362bcbe9548"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "banned_users = ['andrew', 'carolina', 'david']\n",
+        "user = 'marie'\n",
+        "if user not in banned_users:\n",
+        " print(f\"{user.title()}, you can post a response if you wish.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fCbEeZn2Q1Z1",
+        "outputId": "ee462a56-4a0a-4623-91e8-cdb3cd6b2f75"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Marie, you can post a response if you wish.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "game_active = True\n",
+        "can_edit = False"
+      ],
+      "metadata": {
+        "id": "1WVHr8x3Q-Ii"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#elif statement\n",
+        "\n",
+        "age = 12\n",
+        "if age < 4:\n",
+        " print(\"Your admission cost is $0.\")\n",
+        "elif age < 18:\n",
+        " print(\"Your admission cost is $25.\")\n",
+        "else:\n",
+        " print(\"Your admission cost is $40.\")"
+      ],
+      "metadata": {
+        "id": "5bCupu-pRKnq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#elif statement inside function (list) with print statements\n",
+        "cars = [\"one\", \"two\", \"three\"]\n",
+        "lish = []\n",
+        "for item in cars:\n",
+        "  if item == \"one\":\n",
+        "    print(\"one lol\")\n",
+        "  else:\n",
+        "    print(\"not one\")\n",
+        "    lish.append(item)\n",
+        "\n",
+        "for item in lish:\n",
+        "  print(\"idk\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YA-ZwcJtS5N9",
+        "outputId": "8c630bbc-b22f-4c31-8afb-3e5e9536e487"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "one lol\n",
+            "not one\n",
+            "not one\n",
+            "idk\n",
+            "idk\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#cheking empty list \n",
+        "toppings = []\n",
+        "if toppings:\n",
+        "  for topping in toppings:\n",
+        "    print(f'adding {topping}')\n",
+        "else:\n",
+        "    print(\"are you sure ?\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vr0JfpUuUGMT",
+        "outputId": "82e3e5c1-b31a-486f-aa01-4ef45be7c2dc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "are you sure ?\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#if-elif-else block\n",
+        "requested_toppings = ['mushrooms', 'extra cheese']\n",
+        "if 'mushrooms' in requested_toppings:\n",
+        " print(\"Adding mushrooms.\")\n",
+        "elif 'pepperoni' in requested_toppings:   #would only print one of the statements\n",
+        " print(\"Adding pepperoni.\")\n",
+        "elif 'extra cheese' in requested_toppings:\n",
+        " print(\"Adding extra cheese.\")\n",
+        "print(\"\\nFinished making your pizza!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fVs-ojtMUrp4",
+        "outputId": "5b244620-8298-49a9-bc92-8e353a90024d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Adding mushrooms.\n",
+            "\n",
+            "Finished making your pizza!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
