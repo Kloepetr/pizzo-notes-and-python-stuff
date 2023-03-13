@@ -47,10 +47,6 @@ Digital real estate </a>
 Mosh coding full descriptive intro </a>
 <br>
 <br>
-<a href="https://www.youtube.com/watch?v=xD7L8i65mu4&list=PLh5wLSn2PchLDNNJgyxWsvq8bG_6aYLPa&index=17" a>
-Digital real estate </a>
-<br>
-<br>
 <a href="https://www.youtube.com/watch?v=Bx19jnGg14M&list=PLr6-GrHUlVf8num0GwJbdt0qKoIAxUIG6" a>
 EJ media python brief intro </a>
 <br>
