@@ -3,9 +3,8 @@
 <h1> Credits </h1>
 </head>
 <body>
-<p> this repo is a brief overview of what 🍕 go over in class, i will try to upload definitions, project ideas, 
-  other python cheat sheets as well.
-<p> Tutorials & Inspirations
+<p> 🍕 HOMEWORKS
+<p> Credits
 <a href="https://github.com/Kloepetr/pizzo-notes-and-python-stuff/tree/main/Resources" a>
 <br>
 1. beginner python projects </a>
