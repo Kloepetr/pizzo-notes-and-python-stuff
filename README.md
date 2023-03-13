@@ -14,7 +14,7 @@
 2. 🍕Ap com sci notes
 <br>
    <a href="https://github.com/Kloepetr/pizzo-notes-and-python-stuff/tree/main/Software%20intro%20notes" a>
-3. 🍕Intro software notes
+3. 🍕Software intro notes
 <p/>
 </body>
 </html>
