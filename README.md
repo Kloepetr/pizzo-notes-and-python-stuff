@@ -6,7 +6,7 @@
 <p> this repo is a brief overview of what 🍕 go over in class, i will try to upload definitions, project ideas, 
   other python cheat sheets as well.
 <p> Tutorials & Inspirations
-<a href="https://github.com/Kloepetr/pizzo-notes-and-python-stuff/blob/main/Resources/Youtube%20tutorials" a>
+<a href="https://github.com/Kloepetr/pizzo-notes-and-python-stuff/tree/main/Resources" a>
 <br>
 1. beginner python projects </a>
 <br>
